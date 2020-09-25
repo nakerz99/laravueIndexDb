@@ -1,0 +1,51 @@
+.star {
+    margin-bottom: 3rem;
+    a {
+        @apply no-underline;
+    }
+    .star-card {
+        @apply flex flex-wrap items-center shadow-md rounded p-5 mb-5 w-full text-center;
+        background: white;
+        transform: scale(1);
+        outline: 1px dashed rgba(33, 41, 47, 0.3);
+        outline-offset: -4px;
+        transition: all 300ms ease;
+        @screen md {
+            @apply text-left;
+        }
+        .star-card-img {
+            @apply w-full mb-3;
+            @screen md {
+                @apply w-1/4 mb-0;
+            }
+            img {
+                transition: all 300ms ease;
+                transform: rotate(0deg);
+                height: 7rem;
+            }
+        }
+        .star-card-text {
+            @apply w-full text-black;
+            @screen md {
+                @apply w-3/4;
+            }
+            h3 {
+                @apply text-2xl mb-2;
+            }
+            .star-card-sub {
+                @apply text-lg mb-2 italic;
+            }
+            p {
+                @apply leading-normal;
+            }
+        }
+        &:hover {
+            @apply shadow;
+            transform: scale(.985);
+            img {
+                height: 7rem;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
